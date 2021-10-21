@@ -1,0 +1,40 @@
+- Filstruktur för schematic? Vad är rimligt att ha i varje?
+
+- spänning till MCUn? VSS/VDD, 
+
+VBAT = separat batteri
+Styra DCDC remote -> via IO pinne
+Backup för att patcha -> 0ohms motstånd, ställe att öppna upp ledaren
+
+- vilka typer av headers?
+
+- Programmera MCUn? Headers Hona, 6 st, SWD
+
+
+- SPI?
+
+
+- vilken spänning kan IO-pinnarna ge ut?
+
+
+- silkscreen -> skriv vilken pinne som är vilken
+
+
+
+inte mindre komponenter än 0603
+0805
+
+E12/E24, kommer finnas
+
+
+
+
+
+
+
+
+
+Buck med shield
+Samma kretskort som RFID
+Stiftlist som matchar hc-06 som är kopplad till  MCU, reservera pinnar
+jordplan framtida föreläsning
