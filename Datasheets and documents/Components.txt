@@ -1,0 +1,43 @@
+Ska köpas:
+Headers/IO-lister:
+- 6 hona (programmeringslist)
+- 2 hane (solenoid)
+- ? (vbat)
+- ? (12 v batteri)
+
+Batterier:
+- VBAT 3.3V
+- 12V batteri
+
+Batterihållare?
+- VBAT
+- 12V
+
+Transistorer:
+- Styra lås:
+- Styra buzzer:
+
+
+Skyddsdioder:
+- Lås:
+- Buzzer: 
+
+Shottky-diod:
+
+
+Spolar: 
+- 
+
+Resistorer:
+- 
+
+Kondensatorer:
+- 
+
+
+Köpt:
+Buck: LM2576
+RFID: TRF7960RHBT
+Kristall: ECS-135.600-CDX-0374
+Buzzer: CMT-4023S-SMT-TR
+Solenoid: DSTL-0216-12
