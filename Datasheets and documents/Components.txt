@@ -15,7 +15,9 @@ Batterihållare?
 
 Transistorer:
 - Styra lås:
-- Styra buzzer:
+- Styra buzzer alternativ:
+	- https://www.diodes.com/assets/Datasheets/ZXTN25020CFH.pdf (200 hfe) Buzzerdatablad säger så, overkill af?
+	-
 
 
 Skyddsdioder:
