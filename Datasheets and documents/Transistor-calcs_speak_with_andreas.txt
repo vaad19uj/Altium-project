@@ -1,0 +1,36 @@
+https://electronicsclub.info/transistorcircuits.htm
+https://electronics.stackexchange.com/questions/29029/choosing-the-right-transistor-for-a-switching-circuit
+
+BUZZER
+	Vs = 3.3V
+	RL = 17ohm
+	Ic = 90 eller 200? (db eller calc?)
+	MCU output = 20mA
+	Vc = 3.3V
+	
+	Ic(max) > 2*Ic = 400
+	hfe(min) > 5*(Ic/Ic(max)) = 5*(90/180) =
+	
+	(Är detta tillräckligt?)
+	Ic = 90mA
+	Ib = 90/hfe
+	Rb = 3.3/Ib
+	
+	
+
+LOCK:
+	Vs = 12V
+	RL = 144ohm
+	Ic = Vs/RL = 12/144 = 0.08A = 80mA 
+	MCU output = 20mA
+	Vc = 3.3V
+
+	Ic(max) > 2*Ic = 160mA
+	hfe(min) > 5*(Ic/Ic(max)) = 5*(0.16/0.08) = 10
+
+	Rb = (Vc*hfe) / (5*Ic) = (3.3*25) / (5*0.08) = 82.5 / 0.4 = 206ohm
+	
+	Alternativ:
+		https://www.digikey.com/en/products/detail/comchip-technology/MMBTA44-G/6138900
+		https://www.digikey.com/en/products/detail/comchip-technology/PZTA44-G/6138903
+	
