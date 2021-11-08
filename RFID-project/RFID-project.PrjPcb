@@ -143,7 +143,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document7]
-DocumentPath=RFID-Project-PCB.PcbDoc
+DocumentPath=RFID-PCB.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -157,10 +157,14 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=KTVETJTO
+DocumentUniqueId=VPWLXEUA
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for RFID-project\Design Rule Check - RFID-PCB.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for RFID-project\Design Rule Check - RFID-Project-PCB.html
 DItemRevisionGUID=
 
 [Configuration1]
