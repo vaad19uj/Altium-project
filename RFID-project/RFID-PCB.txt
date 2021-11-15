@@ -1,0 +1,10 @@
+Board Information Report
+Filename     : C:\Users\Public\Documents\Altium\Altium-project\RFID-project\RFID-PCB.PcbDoc
+Date         : 15/11/2021
+Time         : 11:10:25
+Time Elapsed : 00:00:00
+
+General
+    Board Size, 64.643mmx123.063mm
+    Components on board, 83
+count : 2
