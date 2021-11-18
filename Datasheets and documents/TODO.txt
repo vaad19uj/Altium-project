@@ -1,0 +1,7 @@
+kondensatorer
+monteringshål
+flytta gnd på cap
+öka size på vcc 0.5
+Glossa mer? 
+kolla vinklar, no spets
+dubbelkolla article #
