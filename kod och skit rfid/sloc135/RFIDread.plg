@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RFIDread - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\a0866251\LOCALS~1\Temp\RSP1AD.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/RFIDread.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\MyTabCtrl.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\RFIDread.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\RFIDreadDlg.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\Tab14443A.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\Tab14443B.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\Tab15693.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabEPC.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabFeliCa.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabFindTags.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabNFC.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabRegisters.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabTagit.cpp"
+"C:\HF RFID Reader\GUI Source Code\GUI - TRF7960 with TI Custom Commands\RFIDread_7960_TI_Custom_Commands\TabTest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\a0866251\LOCALS~1\Temp\RSP1AD.tmp" 
+Creating temporary file "C:\DOCUME~1\a0866251\LOCALS~1\Temp\RSP1AE.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/RFIDread.pdb" /debug /machine:I386 /out:"Debug/RFIDread.exe" /pdbtype:sept 
+".\Debug\DirDialog.obj"
+".\Debug\MyTabCtrl.obj"
+".\Debug\RFIDread.obj"
+".\Debug\RFIDreadDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Tab14443A.obj"
+".\Debug\Tab14443B.obj"
+".\Debug\Tab15693.obj"
+".\Debug\TabEPC.obj"
+".\Debug\TabFeliCa.obj"
+".\Debug\TabFindTags.obj"
+".\Debug\TabNFC.obj"
+".\Debug\TabRegisters.obj"
+".\Debug\TabTagit.obj"
+".\Debug\TabTest.obj"
+".\Debug\RFIDread.res"
+".\CP210xManufacturing.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\a0866251\LOCALS~1\Temp\RSP1AE.tmp"
+<h3>Output Window</h3>
+Compiling...
+MyTabCtrl.cpp
+Generating Code...
+Compiling...
+RFIDread.cpp
+RFIDreadDlg.cpp
+Tab14443A.cpp
+Tab14443B.cpp
+Tab15693.cpp
+TabEPC.cpp
+TabFeliCa.cpp
+TabFindTags.cpp
+TabNFC.cpp
+TabRegisters.cpp
+TabTagit.cpp
+TabTest.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+RFIDread.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

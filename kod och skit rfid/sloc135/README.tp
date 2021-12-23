@@ -1,0 +1,215 @@
+################################################################################
+			module independant syntax
+################################################################################
+
+static char *commands[] = {     "continue",	[label] message
+                                "error",	message
+                                "goto",		label
+				"include",	filename	# same direcroty
+                                "info",		message
+                                "label",	label
+                                "module",	15693 | 14443A | 14443B | TAGIT
+							| FELICA | EPC
+                                "onerror",	label [message]
+                                "send",		word
+                                "?",		[mask op] word,word
+						# exact match order
+                                "??",		[mask op] word,word
+						# arbitrary match order
+                                NULL};
+
+static char *dataPowerMode[] = {	"full",	"half",
+				NULL};
+
+#-------------------------------------------------------------------------------
+# Test example: module independant commands
+#
+label PONOVI
+  send AAAA
+label DELI
+  info	Move tag ZZ within reading distance
+  onerror DELI	Se en poskus ?
+  send BBBBBB
+  ? CCCC
+  send DDDD
+  error	Neki ne stima
+  onerror
+  send EEEE
+  ? FFFF
+  continue PONOVI	A bi se enkrat
+  continue	Nadaljujem
+  goto PONOVI
+
+
+################################################################################
+			15693 module syntax
+################################################################################
+
+static char *commands[] = {	"inventory",
+				"read_single_block",
+				"write_single_block",
+				"lock_block",
+				"read_multiple_blocks",
+				"write_multiple_blocks",
+				"stay_quiet",
+				"select",
+				"reset_to_ready",
+				"write_AFI",
+				"lock_AFI",
+				"write_DSFID",
+				"lock_DSFID",
+				"get_system_info",
+				"get_multi_blk_sel_status",
+				"set_protocol",
+				"flag",
+				"set",
+				NULL};
+
+static char *dataCodingMode[] = {	"4",	"256",
+				NULL};
+
+static char *flags[] = {	"double_sub_carrier",
+				"high_data_rate",
+				"select",
+				"address",
+				"option",
+				NULL};
+
+static char *dataKeys[] = {	"UID",
+				"first_block",
+				"number_of_blocks",
+				"data",
+				"DSFID",
+				"AFI",
+				"data_coding_mode",
+				"power",
+				NULL};
+
+#-------------------------------------------------------------------------------
+# 15693 example
+#
+module 15693
+data_coding_mode 4
+set_protocol
+flag data_rate 1
+data_coding_mode 256
+set_protocol
+inventory
+flag sub_carrier 1
+flag data_rate 0
+flag inventory 1
+inventory
+flag select 1
+set AFI 55
+inventory
+set UID 1234567890abcdef
+set first_block 11
+set data AA
+read_single_block
+
+
+################################################################################
+			14443B module syntax
+################################################################################
+
+static char *commands[] = {	"request",
+				"wake_up",
+				"halt",
+				"set_protocol",
+				"set",
+				NULL};
+
+static char *dataKeys[] = {	"PUPI",
+				"power",
+				NULL};
+
+################################################################################
+			Tagit module syntax
+################################################################################
+
+static char *commands[] = {	"SID_poll",
+				"get_version",
+				"get_block",
+				"put_block",
+				"put_block_lock",
+				"lock_block",
+				"quiet",
+				"set_protocol",
+				"flag",
+				"set",
+				NULL};
+
+static char *flags[] = {	"address",
+				"info",
+				NULL};
+
+static char *dataKeys[] = {	"SID",
+				"block_size",
+				"block_number",
+				"data",
+				"power",
+				NULL};
+
+#-------------------------------------------------------------------------------
+# Tagit example
+#
+module TAGIT
+set_protocol
+info	Move tags XX in ZZ within reading distance
+SID_poll
+error Unexpected SID
+?? FFEEDDCC02050307,3344556607050307
+set block_size 03
+set block_number 02
+set data 11223344
+put_block
+set SID FFEEDDCC
+quiet
+set block_number 02
+set data 55667788
+put_block
+flag addressed 1
+set SID 33445566
+get_block
+error Invalid data in tag
+? 11223344
+set SID FFEEDDCC
+get_block
+? 55667788
+
+################################################################################
+			NFC module syntax
+################################################################################
+
+static char *commands[] = {	"attribute",
+				"wake_up",
+				"param_sel",
+				"data_exch",
+				"deselect",
+				"release",
+				"set_protocol",
+				"generate_CID",
+				"send_file",
+				"flag",
+				"set",
+				NULL};
+
+static char *dataSpeedMode[] = {	"106",	"212", "424",
+				NULL};
+
+static char *flags[] = {	"target",
+				"pasive",
+				NULL};
+
+static char *dataKeys[] = {	"speed",
+				"CID",
+				"DID",
+				"NAD",
+				"send_bit_rate",
+				"receive_bit_rate",
+				"buffer_len",
+				"general_byte",
+				"data",
+				"file_name",
+				"dir_name",
+				NULL};

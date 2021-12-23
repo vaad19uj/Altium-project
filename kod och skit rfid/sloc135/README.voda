@@ -1,0 +1,22 @@
+Dodajanje Class-a s kopiranjem in editirnajem datotek ne gre
+
+Dodajanje TABa
+	dodaj nov resource
+	kopiraj vso grafiko iz Tagit (RFIDread.clw, RFIDread.rc)
+		v RFIDread.clw dodaj IDD_TAB_XX
+		popravi stevce za class in resource
+	odstrani / dodaj polja za vnos
+	zamenjaj IDC iz _TI_ v _XX_
+	dodaj v RFIDreadDlg.cpp (1 krat)
+		MyTabCtrl.cpp (inc + 3 + ...erOfPages)
+		TabTest.cpp (2 krat (parse))
+		README.tp (1 krat (module))
+	kopiraj TabTagit.cpp, TabTagit.h
+		zamenjaj vse Tagit z XX in
+			     TAGIT z XX
+		pusti vsaj en AFX_DATA_INIT, AFX_DATA_MAP, AFX_MSG_MAP
+	V RFIDread.h in TabTest.cpp dodaj parser za novi modul
+
+Dodajanje gumba v RadioBox
+	V RFIDread.clw RFIDread.rc postavi novi gumb v blizino
+		ostalih iz iste skupine

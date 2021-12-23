@@ -1,0 +1,7 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by RFIDread.rc
+//
+#define HIDC_14A_PROTOCOL               0x808a04af    // IDD_TAB_14443A
+#define HIDC_EPC_PROTOCOL               0x808c04e7    // IDD_TAB_EPC
+#define HIDC_FLC_PROTOCOL               0x808b04d4    // IDD_TAB_FELICA
+#define HIDC_TI_PROTOCOL                0x80870463    // IDD_TAB_TAGIT

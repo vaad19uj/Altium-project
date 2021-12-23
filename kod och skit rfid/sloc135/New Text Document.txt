@@ -1,0 +1,5 @@
+This version of GUI has the following changes:
+1. Dummy write
+2. Throws a message box if no COM port is found. Allows users to manually select port.
+3. Byte order change (multiple block data read)
+ 4. 'Clear Log' button

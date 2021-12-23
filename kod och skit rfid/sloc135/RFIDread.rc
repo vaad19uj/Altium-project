@@ -1,0 +1,953 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RFIDread"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_TI_EVM,IDC_STATIC,11,17,20,20
+    LTEXT           "RFIDread Version 1.4",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_RFID_READER DIALOGEX 0, 0, 557, 374
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TRF7960 EVM Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_MY_TAB,"SysTabControl32",0x0,5,0,430,290
+    PUSHBUTTON      "E&xit",IDC_EXIT,490,353,50,14
+    EDITTEXT        IDC_LOGGER,10,293,465,70,ES_MULTILINE | WS_VSCROLL | 
+                    WS_HSCROLL
+    LTEXT           "Rx",IDC_TOP_IRQ3,450,44,10,8
+    LTEXT           "Tx",IDC_TOP_IRQ2,450,30,8,8
+    LTEXT           "Level",IDC_STATIC,465,124,18,8
+    LTEXT           "High",IDC_STATIC,491,110,16,8
+    LTEXT           "Low",IDC_STATIC,515,110,14,8
+    LTEXT           " # Full",IDC_STATIC,465,140,20,8
+    GROUPBOX        "FIFO status",IDC_STATIC,460,95,75,65
+    PUSHBUTTON      "Update",IDC_UPDATE,445,165,35,14
+    EDITTEXT        IDC_IRQ_PARITY,520,25,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_FRAMING,520,39,10,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_FIFO_LEV_H,495,121,10,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_FIFO_LEV_L,519,121,10,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_FIFO_FULL,495,138,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_SOF,520,55,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_COLL,520,70,10,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_TX,470,25,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_RX,470,41,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_FIFO,470,55,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IRQ_CRC,470,70,10,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "IRQ status",IDC_TOP_IRQ1,445,10,98,80
+    LTEXT           "Parity",IDC_TOP_IRQ6,495,30,18,8
+    LTEXT           "Framing",IDC_TOP_IRQ7,495,44,26,8
+    LTEXT           "S/EOF",IDC_TOP_IRQ8,495,60,23,8
+    LTEXT           "Coll.",IDC_TOP_IRQ9,495,74,15,8
+    LTEXT           "FIFO",IDC_TOP_IRQ4,450,60,15,8
+    LTEXT           "CRC",IDC_TOP_IRQ5,450,74,16,8
+    GROUPBOX        "",IDC_STATIC,440,5,110,180
+    PUSHBUTTON      "Reset FIFO",IDC_RESET,490,165,50,14
+    COMBOBOX        IDC_COM_PORT,495,355,48,70,CBS_DROPDOWN | NOT WS_VISIBLE | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Main channel AM",IDC_MCHAN_AM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,460,220,71,10
+    CONTROL         "AGC on",IDC_AGC_ON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,460,205,41,10
+    GROUPBOX        "Special functions",IDC_STATIC,449,188,85,45
+    CONTROL         "Enable TRF7961",IDC_ENABLE_TRF,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,460,237,70,10
+    ICON            IDR_IDS_ICON,IDR_IDS_ICON,503,314,20,20
+    EDITTEXT        IDC_EDIT1,449,273,32,14,ES_UPPERCASE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | WS_DISABLED
+    PUSHBUTTON      "Select Port",IDC_BUTTON1,485,271,58,18,WS_DISABLED,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Clear Log",IDC_CLEAR,489,336,49,15
+    PUSHBUTTON      "ComPort Auto Detect (Silabs)",IDC_AUTOCOMPORT,447,251,
+                    97,16,NOT WS_VISIBLE,WS_EX_CLIENTEDGE
+END
+
+IDD_TAB_15693 DIALOG DISCARDABLE  0, 0, 421, 276
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,269
+    CONTROL         "Inventory",IDC_15_INVENTORY_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,15,80,10
+    CONTROL         "Read Single Block",IDC_15_READ_SB_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,30,85,8
+    CONTROL         "Write Single Block",IDC_15_WRITE_SB_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,45,85,8
+    CONTROL         "Lock Block",IDC_15_LOCK_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,60,85,8
+    CONTROL         "Read Multiple Blocks",IDC_15_READ_MB_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,75,85,8
+    CONTROL         "Write Multiple Blocks",IDC_15_WRITE_MB_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,90,85,8
+    CONTROL         "Stay Quiet",IDC_15_QUIET_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,105,85,8
+    CONTROL         "Select",IDC_15_SELECT_RB,"Button",BS_AUTORADIOBUTTON,15,
+                    120,85,8
+    CONTROL         "Reset to Ready",IDC_15_READY_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,135,85,8
+    CONTROL         "Write AFI",IDC_15_WRITE_AFI_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,150,85,8
+    CONTROL         "Lock AFI",IDC_15_LOCK_AFI_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,165,85,8
+    CONTROL         "Write DSFID",IDC_15_WRITE_DSIF_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,180,85,8
+    CONTROL         "Lock DSFID",IDC_15_LOCK_DSIF_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,195,85,8
+    CONTROL         "Get System Info",IDC_15_SYS_INFO_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,210,85,8
+    CONTROL         "Get Mult.Blk.Sec Status",IDC_15_SECURITY_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,225,90,8
+    CONTROL         "TI Custom Commands",IDC_TICC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,238,85,10
+    CONTROL         "Write Two Blocks",IDC_WRITE_TWO,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE,15,251,81,10
+    CONTROL         "Lock Two Blocks",IDC_LOCK_TWO,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE,15,262,81,10
+    LTEXT           "(First) Block Number",IDC_STATIC,125,142,64,8
+    LTEXT           "Number of Blocks",IDC_STATIC,132,158,57,8
+    LTEXT           "AFI",IDC_STATIC,177,206,12,8
+    LTEXT           "Data",IDC_STATIC,170,175,16,8
+    LTEXT           "DSFID",IDC_STATIC,167,190,22,8
+    LTEXT           "UID",IDC_STATIC,175,126,14,8
+    LTEXT           "Data Coding Mode",IDC_STATIC,220,15,60,8
+    COMBOBOX        IDC_15_PROTOCOL,225,25,55,45,CBS_DROPDOWN | WS_VSCROLL
+    GROUPBOX        "Tag Flags",IDC_STATIC,115,5,95,90
+    CONTROL         "Double Sub-carrier",IDC_15_F_SUB_CARRIER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,130,20,75,10
+    CONTROL         "High Data Rate",IDC_15_F_DATA_RATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,130,35,65,10
+    CONTROL         "Select",IDC_15_F_SELECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,50,70,8
+    CONTROL         "Addresssed",IDC_15_F_ADDRESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,63,53,10
+    CONTROL         "Option",IDC_15_F_OPTIONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,78,37,10
+    EDITTEXT        IDC_15_DSFID,195,186,25,12,WS_DISABLED
+    EDITTEXT        IDC_15_AFI,195,201,25,14,WS_DISABLED
+    EDITTEXT        IDC_15_DATA,195,169,220,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_15_NUM_BL,195,154,25,14,WS_DISABLED
+    EDITTEXT        IDC_15_FIRST_BN,195,138,25,14,WS_DISABLED
+    COMBOBOX        IDC_15_UID,195,125,89,140,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Set Protocol",IDC_15_SEND,225,80,50,14
+    PUSHBUTTON      "Execute",IDC_15_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_15_UID_NO,290,125,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Number of Blocks",IDC_STATIC,325,135,57,8
+    LTEXT           "Block Size",IDC_STATIC,345,145,34,8
+    EDITTEXT        IDC_15_TAG_NB,390,130,15,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_15_TAG_BS,390,144,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Tag Info",IDC_STATIC,320,120,95,45
+    CONTROL         "Full Power",IDC_15_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,225,50,49,10
+    CONTROL         "Half Power",IDC_15_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,225,60,51,10
+    CONTROL         "List1",IDC_15_RSSI,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,285,10,135,95
+END
+
+IDD_TAB_14443A DIALOGEX 0, 0, 421, 266
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "FSDI",IDC_STATIC,170,140,17,8
+    LTEXT           "FSCI",IDC_STATIC,170,155,16,8
+    LTEXT           "SFGI",IDC_STATIC,275,190,17,8
+    LTEXT           "DR",IDC_STATIC,175,175,12,8
+    LTEXT           "FWI",IDC_STATIC,170,190,14,8
+    LTEXT           "UID",IDC_STATIC,173,126,14,8
+    EDITTEXT        IDC_14A_FWI,195,186,25,12,WS_DISABLED
+    EDITTEXT        IDC_14A_SFGI,240,185,25,14,WS_DISABLED
+    EDITTEXT        IDC_14A_DR,195,169,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_14A_FSCI,195,154,25,14,WS_DISABLED
+    EDITTEXT        IDC_14A_FSDI,195,138,25,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,114,112,305,110
+    PUSHBUTTON      "Execute",IDC_14A_EXECUTE,366,246,50,14
+    EDITTEXT        IDC_14A_UID_NO,305,125,15,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_14A_CID,240,140,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "CID",IDC_STATIC,276,145,13,8
+    EDITTEXT        IDC_14A_DS,240,170,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "DS",IDC_STATIC,275,175,38,8
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,240
+    CONTROL         "Anticollision",IDC_14A_ANTICOLL_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,15,80,10
+    CONTROL         "Select",IDC_14A_SELECT_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,30,85,8
+    CONTROL         "HLTA",IDC_14A_HLTA_RB,"Button",BS_AUTORADIOBUTTON,15,45,
+                    85,8
+    CONTROL         "Deselect",IDC_14A_DESELECT_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,60,85,8
+    CONTROL         "RATS",IDC_14A_RATS_RB,"Button",BS_AUTORADIOBUTTON,15,75,
+                    85,8
+    CONTROL         "PPS",IDC_14A_PPS_RB,"Button",BS_AUTORADIOBUTTON,15,90,
+                    85,8
+    COMBOBOX        IDC_14A_UID,195,125,105,120,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Protocol",IDC_14A_PROTOCOL,225,80,50,14,0,0,
+                    HIDC_14A_PROTOCOL
+    CONTROL         "Full Power",IDC_14A_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,225,50,49,10
+    CONTROL         "Half Power",IDC_14A_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,225,60,51,10
+    CONTROL         "CID supported",IDC_14A_CID_SUPP,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,320,145,61,10
+    CONTROL         "NAD supproted",IDC_14A_NAD_SUPP,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,320,160,65,10
+    EDITTEXT        IDC_14A_HISTORY,195,200,125,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "History",IDC_STATIC,165,205,22,8
+END
+
+IDD_TAB_14443B DIALOG DISCARDABLE  0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,240
+    CONTROL         "Request",IDC_14B_REQUB_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,15,80,10
+    CONTROL         "Wake up",IDC_14B_WUPB_RB,"Button",BS_AUTORADIOBUTTON,15,
+                    30,85,8
+    CONTROL         "Attrib",IDC_14B_ATTRIB_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,45,45,10
+    CONTROL         "Halt",IDC_14B_HALT,"Button",BS_AUTORADIOBUTTON,15,60,85,
+                    8
+    LTEXT           "AFI",IDC_STATIC,178,141,12,8
+    LTEXT           "Number of Apps",IDC_STATIC,138,157,52,8
+    LTEXT           "Protocol Type",IDC_STATIC,145,205,45,8
+    LTEXT           "Bit Rate",IDC_STATIC,164,173,26,8
+    LTEXT           "Max Frame",IDC_STATIC,154,189,36,8
+    LTEXT           "PUPI",IDC_STATIC,172,125,18,8
+    EDITTEXT        IDC_14B_MAX_FRAME,195,186,25,12,WS_DISABLED
+    EDITTEXT        IDC_14B_PROTO_TYPE,195,201,75,14,WS_DISABLED
+    EDITTEXT        IDC_14B_BIT_RATE,195,169,25,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_14B_NUM_APPL,195,154,25,14,WS_DISABLED
+    EDITTEXT        IDC_14B_AFI,195,138,25,14,WS_DISABLED
+    COMBOBOX        IDC_14B_PUPI,195,125,89,140,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Set Protocol",IDC_14B_SEND,225,80,50,14
+    PUSHBUTTON      "Execute",IDC_14B_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_14B_PUPI_NO,290,125,15,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "FWI",IDC_STATIC,255,160,14,8
+    LTEXT           "ADC",IDC_STATIC,255,175,16,8
+    EDITTEXT        IDC_14B_FWI,275,155,40,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_14B_ADC,275,169,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "FO",IDC_STATIC,261,190,10,8
+    EDITTEXT        IDC_14B_FO,275,185,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Full Power",IDC_14B_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,225,50,49,10
+    CONTROL         "Half Power",IDC_14B_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,225,60,51,10
+    EDITTEXT        IDC_14B_TR0,340,130,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "TR0",IDC_STATIC,360,135,15,8
+    EDITTEXT        IDC_14B_TR1,340,145,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "TR1",IDC_STATIC,360,150,15,8
+    CONTROL         "EOF",IDC_14B_EOF,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,340,160,30,10
+    CONTROL         "SOF",IDC_14B_SOF,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,370,160,30,10
+    EDITTEXT        IDC_14B_PC2PI,340,170,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "PCD to PICC",IDC_STATIC,360,175,42,8
+    EDITTEXT        IDC_14B_PI2PC,340,185,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "PICC to PCD",IDC_STATIC,360,190,42,8
+    EDITTEXT        IDC_14B_CID,340,200,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "CID",IDC_STATIC,360,205,13,8
+END
+
+IDD_TAB_TAGIT DIALOGEX 0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Manufacturer",IDC_STATIC,143,142,43,8
+    LTEXT           "Chip Version",IDC_STATIC,146,158,40,8
+    LTEXT           "Data",IDC_STATIC,170,205,16,8
+    LTEXT           "Block Size",IDC_STATIC,152,175,34,8
+    LTEXT           "Block Number",IDC_STATIC,140,190,46,8
+    LTEXT           "SID",IDC_STATIC,173,126,13,8
+    GROUPBOX        "Tag Flags",IDC_STATIC,115,5,95,90
+    CONTROL         "Addressed",IDC_TI_F_ADDRESSED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,20,49,10
+    EDITTEXT        IDC_TI_BLOCK_NUM,195,186,25,12,WS_DISABLED
+    EDITTEXT        IDC_TI_DATA,195,201,220,14,WS_DISABLED
+    EDITTEXT        IDC_TI_BL_SIZE,195,169,25,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_TI_VERSION,195,154,25,14,WS_DISABLED
+    EDITTEXT        IDC_TI_MANUF,195,138,25,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Execute",IDC_TI_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_TI_SID_NO,255,125,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_TI_NUM_BL,245,170,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Number of Blocks",IDC_STATIC,281,175,57,8
+    EDITTEXT        IDC_TI_LOCK_ST,230,185,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Lock Status",IDC_STATIC,280,190,38,8
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,240
+    CONTROL         "SID poll",IDC_TI_SID_POLL_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,15,80,10
+    CONTROL         "Get Version",IDC_TI_VERSION_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,30,85,8
+    CONTROL         "Get Block",IDC_TI_GET_BL_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,45,85,8
+    CONTROL         "Put Block",IDC_TI_PUT_BL_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,60,85,8
+    CONTROL         "Put Block Lock",IDC_TI_PUT_BL_LOCK_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,75,85,8
+    CONTROL         "Lock Block",IDC_TI_LOCK_BL_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,90,85,8
+    CONTROL         "Quiet",IDC_TI_QUIET_RB,"Button",BS_AUTORADIOBUTTON,15,
+                    105,85,8
+    COMBOBOX        IDC_TI_SOD,195,125,54,120,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Protocol",IDC_TI_PROTOCOL,235,80,50,14,0,0,
+                    HIDC_TI_PROTOCOL
+    CONTROL         "Info",IDC_TI_F_INFO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,35,28,10
+    CONTROL         "Full Power",IDC_TI_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,235,50,49,10
+    CONTROL         "Half Power",IDC_TI_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,235,60,51,10
+END
+
+IDD_TAB_FELICA DIALOGEX 0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Manufacturer param.",IDC_STATIC,120,140,66,8
+    LTEXT           "Requested data",IDC_STATIC,135,160,52,8
+    LTEXT           "Manufacturer ID",IDC_STATIC,135,125,52,8
+    EDITTEXT        IDC_FLC_REQ_DATA,195,154,25,14,WS_DISABLED
+    EDITTEXT        IDC_FLC_MANUF_PARAM,195,138,80,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Execute",IDC_FLC_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_FLC_MID_NO,290,125,15,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,240
+    CONTROL         "Polling",IDC_FLC_POLLING_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,15,80,10
+    CONTROL         "Check",IDC_FLC_CHECK_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,30,85,8
+    CONTROL         "Update",IDC_FLC_UPDATE_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,45,85,8
+    COMBOBOX        IDC_FLC_MID,195,125,90,120,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Protocol",IDC_FLC_PROTOCOL,225,80,50,14,0,0,
+                    HIDC_FLC_PROTOCOL
+    CONTROL         "Full Power",IDC_FLC_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,225,50,49,10
+    CONTROL         "Half Power",IDC_FLC_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,225,60,51,10
+    COMBOBOX        IDC_FLC_SPEED,225,25,48,50,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Speed",IDC_STATIC,225,15,22,8
+    EDITTEXT        IDC_FLC_SLOT_NO,195,170,25,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Number of slots",IDC_STATIC,135,175,50,8
+END
+
+IDD_TAB_EPC DIALOGEX 0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Data",IDC_STATIC,170,205,16,8
+    LTEXT           "Block Number",IDC_STATIC,140,190,46,8
+    LTEXT           "EPC",IDC_STATIC,173,126,15,8
+    EDITTEXT        IDC_EPC_BLOCK_NUM,195,186,25,12,WS_DISABLED
+    EDITTEXT        IDC_EPC_DATA,195,201,220,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Execute",IDC_EPC_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_EPC_ID_NO,275,125,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,240
+    CONTROL         "Begin Round",IDC_EPC_BEGIN_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,15,80,10
+    CONTROL         "Complete Reset",IDC_EPC_RESET_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,30,85,8
+    CONTROL         "Block Write",IDC_EPC_WRITE_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,45,85,8
+    CONTROL         "Lock Block",IDC_EPC_LOCK_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,60,85,8
+    CONTROL         "Lock Whole Memory",IDC_EPC_LOCK_ALL_RB,"Button",
+                    BS_AUTORADIOBUTTON,15,75,85,8
+    CONTROL         "Destroy",IDC_EPC_DESTROY_RB,"Button",BS_AUTORADIOBUTTON,
+                    15,90,85,8
+    COMBOBOX        IDC_EPC_ID,195,125,75,120,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Protocol",IDC_EPC_PROTOCOL,225,80,50,14,0,0,
+                    HIDC_EPC_PROTOCOL
+    CONTROL         "Full Power",IDC_EPC_FULL_POWER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,225,50,49,10
+    CONTROL         "Half Power",IDC_EPC_HALF_POWER,"Button",
+                    BS_AUTORADIOBUTTON,225,60,51,10
+    EDITTEXT        IDC_EPC_PASS,195,170,40,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Password",IDC_STATIC,155,175,32,8
+    COMBOBOX        IDC_EPC_SLOT_NO,195,155,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Number of Slots",IDC_STATIC,135,160,51,8
+END
+
+IDD_TAB_FINDTAGS DIALOG DISCARDABLE  0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "14443B",IDC_FIND_14443B3,110,120,65,105
+    PUSHBUTTON      "Run",IDC_FIND_RUN,365,230,50,14
+    GROUPBOX        "15693",IDC_STATIC,5,5,100,220
+    LTEXT           "Count",IDC_STATIC,10,20,20,8
+    LTEXT           "UIDs",IDC_STATIC,10,35,17,8
+    EDITTEXT        IDC_FIND_15693N,40,15,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_15693,10,45,90,175,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Count",IDC_FIND_14443B2,115,135,20,8
+    LTEXT           "PUPIs",IDC_FIND_14443B1,115,150,21,8
+    EDITTEXT        IDC_FIND_14443BN,145,135,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_14443B,115,160,55,60,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    GROUPBOX        "Tagit",IDC_FIND_TAGIT3,235,5,65,220
+    LTEXT           "Count",IDC_FIND_TAGIT2,241,20,20,8
+    LTEXT           "SIDs",IDC_FIND_TAGIT1,241,35,16,8
+    EDITTEXT        IDC_FIND_TAGITN,271,20,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_TAGIT,241,45,55,175,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Count",IDC_FIND_14443A2,115,20,20,8
+    LTEXT           "UIDs",IDC_FIND_14443A1,115,34,17,8
+    EDITTEXT        IDC_FIND_14443AN,145,20,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_14443A,115,44,110,61,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    GROUPBOX        "14443A",IDC_FIND_14443A3,110,5,120,105
+    GROUPBOX        "FeliCa",IDC_FIND_FLC3,305,5,105,105
+    LTEXT           "Count",IDC_FIND_FLC2,311,20,20,8
+    LTEXT           "IDm",IDC_FIND_FLC1,311,35,14,8
+    EDITTEXT        IDC_FIND_FLCN,341,20,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_FLC,311,45,95,60,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    GROUPBOX        "EPC",IDC_FIND_EPC3,305,120,65,105
+    LTEXT           "Count",IDC_FIND_EPC2,311,135,20,8
+    LTEXT           "SIDs",IDC_FIND_EPC1,311,150,16,8
+    EDITTEXT        IDC_FIND_EPCN,341,135,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIND_EPC,311,160,55,60,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "o",IDC_FIND_15693x,10,230,8,8,NOT WS_VISIBLE
+    LTEXT           "o",IDC_FIND_TAGITx,240,230,8,8,NOT WS_VISIBLE
+    LTEXT           "o",IDC_FIND_14443x,170,230,8,8,NOT WS_VISIBLE
+    LTEXT           "o",IDC_FIND_EPCx,350,230,8,8,NOT WS_VISIBLE
+    LTEXT           "o",IDC_FIND_14443Ax,115,230,8,8,NOT WS_VISIBLE
+    LTEXT           "o",IDC_FIND_FELICAx,310,230,8,8,NOT WS_VISIBLE
+    CONTROL         "Select All",IDC_FIND_SEL_ALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,230,45,10
+    CONTROL         "",IDC_FIND_SEL_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    95,10,16,8
+    CONTROL         "",IDC_FIND_SEL_14A,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,220,10,8,8
+    CONTROL         "",IDC_FIND_SEL_TAGIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,290,10,8,8
+    CONTROL         "",IDC_FIND_SEL_FELICA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,400,10,8,8
+    CONTROL         "",IDC_FIND_SEL_EPC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,360,125,8,8
+    CONTROL         "",IDC_FIND_SEL_14B,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,125,8,8
+END
+
+IDD_TAB_REGISTERS DIALOG DISCARDABLE  0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Read",IDC_RG_READ,365,230,50,14
+    GROUPBOX        "Main Control",IDC_STATIC,5,5,120,45
+    LTEXT           "Chip Status Control",IDC_STATIC,31,20,61,8
+    EDITTEXT        IDC_RG_CIRC_STATUS,105,15,15,14,ES_AUTOHSCROLL
+    LTEXT           "ISO Control",IDC_STATIC,60,35,37,8
+    EDITTEXT        IDC_RG_ISO_CTRL,105,30,15,14,ES_AUTOHSCROLL
+    GROUPBOX        "Protocol Sub-Setting",IDC_STATIC,5,60,120,165
+    LTEXT           "ISO Mode - Option 1",IDC_STATIC,34,75,66,8
+    EDITTEXT        IDC_RG_ISO_MODE1,105,70,15,14,ES_AUTOHSCROLL
+    LTEXT           "ISO Mode - Option 2",IDC_STATIC,34,90,66,8
+    EDITTEXT        IDC_RG_ISO_MODE2,105,86,15,14,ES_AUTOHSCROLL
+    LTEXT           "TX Timer (EPC) Setting - H",IDC_STATIC,15,105,85,8
+    EDITTEXT        IDC_RG_TX_TIMER_H,105,100,15,14,ES_AUTOHSCROLL
+    LTEXT           "TX Timer (EPC) Setting - L",IDC_STATIC,16,120,84,8
+    EDITTEXT        IDC_RG_TX_TIMER_L,105,115,15,14,ES_AUTOHSCROLL
+    LTEXT           "TX Pulse Length Control",IDC_STATIC,22,135,78,8
+    EDITTEXT        IDC_RG_TX_PULSE_LEN,105,130,15,14,ES_AUTOHSCROLL
+    LTEXT           "RX No Response Wait Time",IDC_STATIC,10,150,90,8
+    EDITTEXT        IDC_RG_RX_NR_WAIT,105,145,15,14,ES_AUTOHSCROLL
+    LTEXT           "RX Wait Time",IDC_STATIC,55,165,45,8
+    EDITTEXT        IDC_RG_RX_WAIT,105,160,15,14,ES_AUTOHSCROLL
+    LTEXT           "Modulator Control",IDC_STATIC,44,180,56,8
+    EDITTEXT        IDC_RG_MODULATOR,105,175,15,14,ES_AUTOHSCROLL
+    LTEXT           "RX Special Settings",IDC_STATIC,35,195,64,8
+    EDITTEXT        IDC_RG_RX_SPECIAL,105,190,15,14,ES_AUTOHSCROLL
+    LTEXT           "Regulator Control",IDC_STATIC,44,210,56,8
+    EDITTEXT        IDC_RG_REGULATOR,105,206,15,14,ES_AUTOHSCROLL
+    GROUPBOX        "Status",IDC_STATIC,160,5,150,75
+    LTEXT           "IRQ Status",IDC_STATIC,245,20,36,8
+    EDITTEXT        IDC_RG_IRQ,290,15,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Oscillator Status and Interrupt Mask",IDC_STATIC,170,35,
+                    113,8
+    EDITTEXT        IDC_RG_OSC_INT,290,30,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Collision Position",IDC_STATIC,228,50,53,8
+    EDITTEXT        IDC_RG_COLLISION,290,45,15,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "RSSI Level",IDC_STATIC,235,65,37,8
+    EDITTEXT        IDC_RG_RSSI,280,60,25,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "RAM",IDC_STATIC,165,135,90,90
+    LTEXT           "10",IDC_STATIC,175,150,9,8
+    EDITTEXT        IDC_RG_RAM10,191,145,15,14,ES_AUTOHSCROLL
+    LTEXT           "11",IDC_STATIC,175,165,9,8
+    EDITTEXT        IDC_RG_RAM11,191,160,15,14,ES_AUTOHSCROLL
+    LTEXT           "12",IDC_STATIC,175,180,9,8
+    EDITTEXT        IDC_RG_RAM12,191,175,15,14,ES_AUTOHSCROLL
+    LTEXT           "13",IDC_STATIC,175,195,9,8
+    EDITTEXT        IDC_RG_RAM13,191,190,15,14,ES_AUTOHSCROLL
+    LTEXT           "14",IDC_STATIC,175,210,9,8
+    EDITTEXT        IDC_RG_RAM14,191,205,15,14,ES_AUTOHSCROLL
+    LTEXT           "15",IDC_STATIC,220,151,9,8
+    EDITTEXT        IDC_RG_RAM15,235,145,15,14,ES_AUTOHSCROLL
+    LTEXT           "16",IDC_STATIC,220,166,9,8
+    EDITTEXT        IDC_RG_RAM16,235,161,15,14,ES_AUTOHSCROLL
+    LTEXT           "17",IDC_STATIC,220,181,9,8
+    EDITTEXT        IDC_RG_RAM17,235,175,15,14,ES_AUTOHSCROLL
+    LTEXT           "18",IDC_RG_RAM18T,220,196,9,8
+    EDITTEXT        IDC_RG_RAM18,235,191,15,14,ES_AUTOHSCROLL
+    LTEXT           "19",IDC_RG_RAM19T,220,210,9,8
+    EDITTEXT        IDC_RG_RAM19,235,206,15,14,ES_AUTOHSCROLL
+    GROUPBOX        "Test",IDC_STATIC,315,110,90,45
+    LTEXT           "Test Settings 1",IDC_STATIC,328,125,48,8
+    EDITTEXT        IDC_RG_TEST1,383,120,15,14,ES_AUTOHSCROLL
+    LTEXT           "Test Settings 2",IDC_STATIC,328,140,48,8
+    EDITTEXT        IDC_RG_TEST2,383,135,15,14,ES_AUTOHSCROLL
+    GROUPBOX        "FIFO",IDC_STATIC,315,165,90,60
+    LTEXT           "FIFO Status",IDC_STATIC,338,180,38,8
+    EDITTEXT        IDC_RG_FIFO,383,175,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "TX Length Byte 1",IDC_STATIC,320,195,56,8
+    EDITTEXT        IDC_RG_TX_LEN1,383,190,15,14,ES_AUTOHSCROLL
+    LTEXT           "TX Length Byte 2",IDC_STATIC,320,210,56,8
+    EDITTEXT        IDC_RG_TX_LEN2,383,205,15,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Write",IDC_RG_WRITE,300,230,50,14
+    PUSHBUTTON      "Set Defaults",IDC_RG_DEFAULTS,30,230,50,14
+    LTEXT           "Target Detection Level",IDC_RG_NFC18,190,105,74,8,NOT 
+                    WS_VISIBLE
+    LTEXT           "NFC Target Protocol",IDC_RG_NFC19,190,120,66,8,NOT 
+                    WS_VISIBLE
+    GROUPBOX        "NFC Registers",IDC_RG_NFCBOX,165,90,110,40,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_RG_NFC18E,170,100,15,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    EDITTEXT        IDC_RG_NFC19E,170,115,15,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED
+END
+
+IDD_TAB_NFC DIALOG DISCARDABLE  0, 0, 421, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "DID",IDC_STATIC,170,140,16,8
+    LTEXT           "Transmit Bit Rate",IDC_STATIC,130,155,55,8
+    LTEXT           "Receive Bit Rate",IDC_STATIC,130,170,55,8
+    LTEXT           "CID",IDC_STATIC,173,126,13,8
+    GROUPBOX        "Protocol Flags",IDC_STATIC,115,5,95,90
+    CONTROL         "Target",IDC_NFC_F_TARGET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,20,49,10
+    EDITTEXT        IDC_NFC_BUF_LEN,195,185,25,12,WS_DISABLED
+    EDITTEXT        IDC_NFC_DATA,195,201,220,14,WS_DISABLED
+    EDITTEXT        IDC_NFC_BR,195,170,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_NFC_BS,195,155,15,14,WS_DISABLED
+    EDITTEXT        IDC_NFC_DID,195,140,15,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,115,115,305,110
+    PUSHBUTTON      "Execute",IDC_NFC_EXECUTE,365,230,50,14
+    EDITTEXT        IDC_NFC_GEN_BYTE,330,170,10,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "General Byte",IDC_STATIC,351,175,57,8
+    EDITTEXT        IDC_NFC_NAD,330,185,15,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "NAD",IDC_STATIC,350,190,16,8
+    CONTROL         "SDD",IDC_NFC_SDD_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,15,31,10
+    CONTROL         "Select",IDC_NFC_SELECT_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,30,36,10
+    CONTROL         "Polling",IDC_NFC_POLLING_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,45,37,10
+    CONTROL         "Attribute",IDC_NFC_ATTR_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,60,80,10
+    CONTROL         "Wake up",IDC_NFC_WAKEUP_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,76,85,8
+    CONTROL         "Parameter Selection",IDC_NFC_PAR_SEL_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,15,90,85,8
+    CONTROL         "Data Exch. Protocol",IDC_NFC_DATA_EX_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,15,106,85,8
+    CONTROL         "Deselect",IDC_NFC_DESELECT_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,15,121,85,8
+    CONTROL         "Release",IDC_NFC_RELEASE_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,135,85,8
+    PUSHBUTTON      "Set Protocol",IDC_NFC_PROTOCOL,235,80,50,14
+    CONTROL         "Passive",IDC_NFC_F_PASIVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,35,35,10
+    LTEXT           "Data",IDC_STATIC,165,200,16,8
+    LTEXT           "Buffer Length",IDC_STATIC,140,185,44,8
+    CONTROL         "106 kbs",IDC_NFC_F_106KBS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,130,50,41,10
+    CONTROL         "212 kbs",IDC_NFC_F_212KBS,"Button",BS_AUTORADIOBUTTON,
+                    130,65,41,10
+    CONTROL         "424 kbs",IDC_NFC_F_424KBS,"Button",BS_AUTORADIOBUTTON,
+                    130,80,41,10
+    LTEXT           "File to Send",IDC_NFC_SEND,220,15,38,8
+    EDITTEXT        IDC_NFC_FILE_NAME,260,10,120,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Browse",IDC_NFC_NEW_FNAME,385,10,30,14,WS_DISABLED
+    LTEXT           "Save in",IDC_NFC_SAVE,230,55,25,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_NFC_DIR_NAME,260,50,120,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Browse",IDC_NFC_NEW_DNAME,385,50,30,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Generate",IDC_NFC_GENERATE,300,125,40,14
+    PUSHBUTTON      "Send",IDC_NFC_SEND_FILE,220,30,35,14,WS_DISABLED
+    EDITTEXT        IDC_NFC_CID,195,125,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test antenna coupling",IDC_NFC_ATEST,315,70,80,14,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_NFC_AT_RETRIES,335,85,20,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_NFC_AT_SIZE,360,85,20,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Retries",IDC_NFC_AT_T1,305,90,23,8,NOT WS_VISIBLE
+    LTEXT           "Size",IDC_NFC_AT_T2,385,90,14,8,NOT WS_VISIBLE
+    CONTROL         "Progress1",IDC_NFC_AT_PROG,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,315,100,80,14
+    CONTROL         "Progress1",IDC_NFC_FILE_PROG,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,260,30,120,14
+    EDITTEXT        IDC_NFC_SLOT_NO,330,155,25,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Number of slots",IDC_STATIC,360,160,50,8
+    LTEXT           "UID",IDC_STATIC,230,142,14,8
+    EDITTEXT        IDC_NFC_UID_NO,362,140,15,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    COMBOBOX        IDC_NFC_UID2,252,140,105,120,CBS_DROPDOWN | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Commands",IDC_STATIC,5,5,105,235
+END
+
+IDD_TAB_TEST DIALOG DISCARDABLE  0, 0, 426, 223
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "New Test Program",IDC_T_NEW_TP,345,15,75,14
+    EDITTEXT        IDC_T_CURR_TP,35,15,305,14,ES_READONLY
+    LTEXT           "Current Test Program ",IDC_STATIC,5,5,70,8
+    PUSHBUTTON      "Run TP",IDC_T_RUN_TP,5,35,50,14
+    LTEXT           "String to send:",IDC_STATIC,10,70,46,8
+    EDITTEXT        IDC_T_STRING,60,70,305,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_T_SEND,370,65,50,14
+    CONTROL         "Expert - keep settings when switching protocols",
+                    IDC_T_EXEPRT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,168,
+                    165,10
+    PUSHBUTTON      "Digitest",IDC_T_DIGITEST,5,148,50,14,NOT WS_VISIBLE
+    EDITTEXT        IDC_T_DIGIERR,60,148,25,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Error count",IDC_STATIC,90,153,36,8
+    PUSHBUTTON      "Send Raw",IDC_T_SEND_RAW,370,80,50,14
+    PUSHBUTTON      "Get Firmware Version",IDC_FIRMVER,6,197,74,15
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RFIDread MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RFIDread\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "RFIDread.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "RFIDread Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RFID_READER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 550
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 367
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_RFID_READER DLGINIT
+BEGIN
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_COM_PORT, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0030, 
+    0
+END
+
+IDD_TAB_FELICA DLGINIT
+BEGIN
+    IDC_FLC_SPEED, 0x403, 9, 0
+0x3132, 0x2032, 0x626b, 0x732f, "\000" 
+    IDC_FLC_SPEED, 0x403, 9, 0
+0x3234, 0x2034, 0x626b, 0x732f, "\000" 
+    0
+END
+
+IDD_TAB_EPC DLGINIT
+BEGIN
+    IDC_EPC_SLOT_NO, 0x403, 2, 0
+0x0030, 
+    IDC_EPC_SLOT_NO, 0x403, 2, 0
+0x0034, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_IDS_ICON            ICON    DISCARDABLE     "res\\RFIDread.ico"
+IDR_TI_ICON             ICON    DISCARDABLE     "res\\RFIDread.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About RFIDread..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TAB_15693 DLGINIT
+BEGIN
+    IDC_15_PROTOCOL, 0x403, 11, 0
+0x2031, 0x756f, 0x2074, 0x666f, 0x3420, "\000" 
+    IDC_15_PROTOCOL, 0x403, 13, 0
+0x2031, 0x756f, 0x2074, 0x666f, 0x3220, 0x3635, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TI_EVM              ICON    DISCARDABLE     "res\\RFIDread.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RFIDread.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\RFIDread.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

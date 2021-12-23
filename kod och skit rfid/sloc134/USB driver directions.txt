@@ -1,0 +1,7 @@
+Please follow this link to the USB driver website and install the appropriate driver based on the operating system you are using.
+
+https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
+
+or
+
+Search for "CP2102 USB to UART Bridge VCP Drivers", select driver based on appropriate operating system and then install.
